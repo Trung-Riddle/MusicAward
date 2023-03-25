@@ -1,5 +1,6 @@
+# ==================API USER================ 
 ### Sign up
-POST http://localhost:4005/user/create
+POST http://localhost:3005/users/create
 Content-Type: application/json
 
 # data: {
@@ -16,7 +17,7 @@ Content-Type: application/json
 }
 
 ### Login
-POST http://localhost:4005/user/login
+POST http://localhost:3005/users/login
 Content-Type: application/json
 
 # data: {
@@ -30,8 +31,9 @@ Content-Type: application/json
     "password": "123456789"
 }
 
+# ====================API ALBUM===================
 ### Create album
-POST http://localhost:4005/album/create
+POST http://localhost:3005/albums/create
 Content-Type: application/json
 
 # data: {
@@ -44,3 +46,6 @@ Content-Type: application/json
     "data": "{'title':'chungdi','description':'sdfsdfoioi'}",
     "image": "File"
 }
+
+### Find all albums
+GET http://localhost:3005/albums

@@ -35,4 +35,15 @@ export const albumService = {
       return error;
     }
   },
+
+  async findAll() {
+    try {
+      const albums = await AlbumModel.find().select("title image");
+
+      return { status: 200, data: albums };
+    } catch (error) {
+      console.error(error);
+      return error;
+    }
+  },
 };

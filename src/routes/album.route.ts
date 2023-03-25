@@ -17,5 +17,8 @@ export default (): express.Router => {
     validateRequestCreateAlbum(validatorDto.createAlbumDto),
     albumController.createAlbum
   );
+
+  router.get("/", albumController.findAllAlbum);
+
   return router;
 };

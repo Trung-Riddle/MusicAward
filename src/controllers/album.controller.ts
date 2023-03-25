@@ -16,4 +16,16 @@ export const albumController = {
 
     return res.status(album.status).json(album.data);
   },
+
+  async findAllAlbum(
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ): Promise<Response | void> {
+    const albums = await albumService.findAll();
+
+    if (!albums.data) return next(albums);
+
+    return res.status(albums.status).json(albums.data);
+  },
 };
