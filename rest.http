@@ -1,0 +1,46 @@
+### Sign up
+POST http://localhost:4005/user/create
+Content-Type: application/json
+
+# data: {
+#     email: string,
+#     username: string,
+#     password: string
+# }
+
+# Sample data
+{
+    "email": "chungdi@gmail.com",
+    "username": "chungdi",
+    "password": "123456789"
+}
+
+### Login
+POST http://localhost:4005/user/login
+Content-Type: application/json
+
+# data: {
+#     email: string,
+#     password: string
+# }
+
+# Sample data
+{
+    "email": "chungdi@gmail.com",
+    "password": "123456789"
+}
+
+### Create album
+POST http://localhost:4005/album/create
+Content-Type: application/json
+
+# data: {
+#     data: string,
+#     image: File
+# }
+
+# Sample data
+{
+    "data": "{'title':'chungdi','description':'sdfsdfoioi'}",
+    "image": "File"
+}
