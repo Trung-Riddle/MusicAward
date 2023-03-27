@@ -1,6 +1,7 @@
-import AlbumModel, { IAlbum } from "../../models/album";
+import AlbumModel from "../../models/album";
 import createError from "http-errors";
 import { v2 as uploadCloud } from "cloudinary";
+import SongsModel from "../../models/song";
 
 export const albumService = {
   async create(data: string, files: any) {
@@ -41,6 +42,31 @@ export const albumService = {
       const albums = await AlbumModel.find().select("title image");
 
       return { status: 200, data: albums };
+    } catch (error) {
+      console.error(error);
+      return error;
+    }
+  },
+
+  async findAllSongByAlbum() {
+    try {
+      const albums = await AlbumModel.find();
+
+      // const result = await SongsModel.find().populate("album_id");
+
+      const payload = albums.map(async (album) => {
+        const songs = await SongsModel.find({ album_id: album.id });
+
+        return {
+          _id: album._id,
+          title: album.title,
+          songs,
+        };
+      });
+
+      const result = await Promise.all(payload).then((value) => value);
+
+      return { status: 200, data: result };
     } catch (error) {
       console.error(error);
       return error;
