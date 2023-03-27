@@ -1,4 +1,6 @@
 import { Schema, model, Document } from "mongoose";
+import AlbumModel from "./album";
+import AudioModel from "./audio";
 
 export type ISong = {
   album_id: Array<Schema.Types.ObjectId>;
@@ -16,12 +18,12 @@ export const SongSchema = new Schema(
   {
     album_id: {
       type: Array<Schema.Types.ObjectId>,
-      ref: "albums",
+      ref: AlbumModel,
       required: true,
     },
     name: { type: String, required: true },
     artist: { type: String, required: true },
-    audio: { type: Schema.Types.ObjectId, required: true },
+    audio: { type: Schema.Types.ObjectId, ref: AudioModel, required: true },
     genre: { type: Array<String>, required: true },
   },
   { timestamps: true }
