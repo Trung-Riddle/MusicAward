@@ -27,8 +27,8 @@ Content-Type: application/json
 
 # Sample data
 {
-    "email": "chungdi@gmail.com",
-    "password": "123456789"
+    "email": "chungdigmail.com",
+    "password": "1234555789"
 }
 
 # ====================API ALBUM===================
@@ -46,6 +46,12 @@ Content-Type: application/json
     "data": "{'title':'chungdi','description':'sdfsdfoioi'}",
     "image": "File"
 }
+{
+    "title": "helle",
+    "description": "alo alo",
+}
 
 ### Find all albums
 GET http://localhost:3005/albums
+
+http://localhost:3005/albums/sdfoisjt

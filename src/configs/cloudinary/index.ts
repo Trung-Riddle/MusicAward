@@ -15,7 +15,7 @@ const cloudinaryOption = {
   },
   params: {
     folder: "music",
-    allowed_formats: ["jpg", "png", "mp3"],
+    allowed_formats: ["jpg","jpeg", "png", "mp3"],
     resource_type: "auto",
   },
 };
