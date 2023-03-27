@@ -16,4 +16,10 @@ export const validatorDto = {
     data: Joi.object().required(),
     image: Joi.object().required(),
   }),
+
+  CreateSongDto: Joi.object({
+    data: Joi.object().required(),
+    audio: Joi.object().required(),
+    thumb_nail: Joi.object().required(),
+  }),
 };

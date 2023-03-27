@@ -14,7 +14,7 @@ export const albumService = {
       const { title, description } = JSON.parse(data);
 
       if (!title || !description) {
-        uploadCloud.uploader.destroy(albumPublicId);
+        await uploadCloud.uploader.destroy(albumPublicId);
         throw createError.BadRequest(`Missing data field`);
       }
 
