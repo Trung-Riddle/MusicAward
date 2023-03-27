@@ -1,4 +1,4 @@
-import { Schema, model, Document } from "mongoose";
+import mongoose, { Schema, model, Document } from "mongoose";
 
 export type IUser = {
   email: string;
@@ -24,6 +24,7 @@ export const userSchema = new Schema(
   { timestamps: true }
 );
 
-const UserModel = model<UserTypeModel>("users", userSchema);
+export const UserModel = model<UserTypeModel>("users", userSchema);
 
-export default UserModel;
+
+

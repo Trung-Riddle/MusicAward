@@ -54,4 +54,6 @@ Content-Type: application/json
 ### Find all albums
 GET http://localhost:3005/albums
 
-http://localhost:3005/albums/sdfoisjt
+#======================= API SONGS ========================
+### Create song
+POST http://localhost:3005/songs

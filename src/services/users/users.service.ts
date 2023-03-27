@@ -1,6 +1,6 @@
 import createError from "http-errors";
 import { CreateUser } from "./types/create-user.type";
-import UserModel from "../../models/user";
+import { UserModel } from "../../models/user";
 import bcrypt from "bcrypt";
 import { LoginUser } from "./types/login-user.type";
 
