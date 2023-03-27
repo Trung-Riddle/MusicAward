@@ -18,7 +18,12 @@ export const validatorDto = {
   }),
 
   CreateSongDto: Joi.object({
-    data: Joi.object().required(),
+    data: {
+      album_id: Joi.array().required(),
+      name: Joi.string().required(),
+      artist: Joi.string().required(),
+      genre: Joi.array().required(),
+    },
     audio: Joi.object().required(),
     thumb_nail: Joi.object().required(),
   }),

@@ -49,3 +49,27 @@ Content-Type: application/json
 
 ### Find all albums
 GET http://localhost:3005/albums
+
+# ====================API SONGS===================
+### Create song
+POST http://localhost:3005/songs/create
+Content-Type: application/json
+
+# data: {
+#     data: string,
+#     thumb_nail: File,
+#     audio: File
+# }
+
+# Sample data
+# ! album_id and genre is an array
+{
+    "data": {
+        "album_id": [1], 
+        "name": "Meo meo meo",
+        "artist": "Amee",
+        "genre": ["balad"]
+    },
+    "thumb_nail": "File",
+    "audio": "File"
+}
