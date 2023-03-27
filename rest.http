@@ -53,3 +53,22 @@ Content-Type: application/json
 
 ### Find all albums
 GET http://localhost:3005/albums
+
+
+
+
+
+POST http://localhost:3005/songs/create
+Content-Type: application/json
+
+
+{
+    "data": {
+        "album_id": [1], 
+        "name": "Meo meo meo",
+        "artist": "Amee",
+        "genre": ["balad"]
+    },
+    "thumb_nail": "File",
+    "audio": "File"
+}
