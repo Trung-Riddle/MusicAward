@@ -7,13 +7,13 @@ const router = express.Router();
 export default (): express.Router => {
   router.post(
     "/create",
-    validateRequest(validatorDto.UserDto),
+    validateRequest(validatorDto.CreateUserDto),
     usersController.createUser
   );
 
   router.post(
     "/login",
-    validateRequest(validatorDto.UserDto),
+    validateRequest(validatorDto.LoginUserDto),
     usersController.loginUser
   );
 

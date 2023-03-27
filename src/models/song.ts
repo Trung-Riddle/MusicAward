@@ -27,6 +27,6 @@ export const SongSchema = new Schema(
   { timestamps: true }
 );
 
-const Song = model<SongTypeModel>("songs", SongSchema);
+const SongsModel = model<SongTypeModel>("songs", SongSchema);
 
-export default Song;
+export default SongsModel;

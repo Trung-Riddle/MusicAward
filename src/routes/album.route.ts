@@ -14,7 +14,7 @@ export default (): express.Router => {
         maxCount: 1,
       },
     ]),
-    validateRequestCreateAlbum(validatorDto.createAlbumDto),
+    validateRequestCreateAlbum(validatorDto.CreateAlbumDto),
     albumController.createAlbum
   );
 

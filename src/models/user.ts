@@ -16,10 +16,9 @@ export const userSchema = new Schema(
       type: String,
       required: true,
       unique: true,
-      lowercase: true,
       trim: true,
     },
-    username: { type: String, default: "" },
+    username: { type: String },
     password: { type: String },
   },
   { timestamps: true }
