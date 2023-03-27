@@ -53,7 +53,3 @@ Content-Type: application/json
 
 ### Find all albums
 GET http://localhost:3005/albums
-
-#======================= API SONGS ========================
-### Create song
-POST http://localhost:3005/songs
