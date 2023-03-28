@@ -24,6 +24,6 @@ export const audioSchema = new Schema(
   { timestamps: true }
 );
 
-const AudioModel = model<AudioTypeModel>("audio", audioSchema);
+const AudioModel = model<AudioTypeModel>("audios", audioSchema);
 
 export default AudioModel;
