@@ -54,8 +54,19 @@ Content-Type: application/json
 ### Find all albums
 GET http://localhost:3005/albums
 
-### Find all song by album
+### Find all song by all album
 GET http://localhost:3005/albums/song-by-album
+
+### Find all song by one album
+GET http://localhost:3005/albums/song-by-album/6421e55f65e79c34f1acde1c
+
+# sample id
+# [
+#     "6421e55f65e79c34f1acde19",
+#     "6421e55f65e79c34f1acde1a",
+#     "6421e55f65e79c34f1acde1b",
+#     "6421e55f65e79c34f1acde1c"
+# ]
 
 # ====================API SONGS===================
 ### Create song

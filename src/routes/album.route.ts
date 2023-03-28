@@ -20,7 +20,9 @@ export default (): express.Router => {
 
   router.get("/", albumController.findAllAlbum);
 
-  router.get("/song-by-album", albumController.findAllSongByAlbum);
+  router.get("/song-by-album", albumController.findAllSongByAllAlbum);
+
+  router.get("/song-by-album/:id", albumController.findAllSongByOneAlbum);
 
   return router;
 };

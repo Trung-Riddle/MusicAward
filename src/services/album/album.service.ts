@@ -48,7 +48,7 @@ export const albumService = {
     }
   },
 
-  async findAllSongByAlbum() {
+  async findAllSongByAllAlbum() {
     try {
       const albums = await AlbumModel.find();
 
@@ -71,6 +71,22 @@ export const albumService = {
       const result = await Promise.all(payload).then((value) => value);
 
       return { status: 200, data: result };
+    } catch (error) {
+      console.error(error);
+      return error;
+    }
+  },
+
+  async findAllSongByOneAlbum(id: string) {
+    try {
+      const songs = await SongsModel.find({ album_id: id }).populate(
+        "audio",
+        "root thumb_nail"
+      );
+
+      if (!songs) throw createError.BadRequest();
+
+      return { status: 200, data: songs };
     } catch (error) {
       console.error(error);
       return error;

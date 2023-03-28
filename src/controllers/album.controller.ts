@@ -29,12 +29,26 @@ export const albumController = {
     return res.status(albums.status).json(albums.data);
   },
 
-  async findAllSongByAlbum(
+  async findAllSongByAllAlbum(
     req: Request,
     res: Response,
     next: NextFunction
   ): Promise<Response | void> {
-    const result = await albumService.findAllSongByAlbum();
+    const result = await albumService.findAllSongByAllAlbum();
+
+    if (!result.data) return next(result);
+
+    return res.status(result.status).json(result.data);
+  },
+
+  async findAllSongByOneAlbum(
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ): Promise<Response | void> {
+    const id = req.params.id;
+
+    const result = await albumService.findAllSongByOneAlbum(id);
 
     if (!result.data) return next(result);
 
