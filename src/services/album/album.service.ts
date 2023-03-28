@@ -55,11 +55,12 @@ export const albumService = {
       // const result = await SongsModel.find().populate("album_id");
 
       const payload = albums.map(async (album) => {
-        const songs = await SongsModel.find({ album_id: album.id });
+        const songs = await SongsModel.find({ album_id: album.id })
 
         return {
           _id: album._id,
           title: album.title,
+          image: album.image,
           songs,
         };
       });
