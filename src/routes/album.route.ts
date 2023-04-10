@@ -17,14 +17,12 @@ export default (): express.Router => {
     validateRequestCreateAlbum(validatorDto.CreateAlbumDto),
     albumController.createAlbum
   );
-  router.get('form-add', albumController.formAlbums)
+  router.get("/form-add", albumController.formAlbums);
   router.get("/", albumController.findAllAlbum);
 
   router.get("/song-by-album", albumController.findAllSongByAllAlbum);
 
   router.get("/song-by-album/:id", albumController.findAllSongByOneAlbum);
-
-  
 
   return router;
 };
