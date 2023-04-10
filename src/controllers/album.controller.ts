@@ -16,6 +16,9 @@ export const albumController = {
 
     return res.status(album.status).json(album.data);
   },
+  async formAlbums(req: Request, res: Response, next: NextFunction): Promise<Response | void> {
+    res.render('form-album')
+  },
 
   async findAllAlbum(
     req: Request,

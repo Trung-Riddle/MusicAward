@@ -1,0 +1,49 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #FFF;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: rgb(0, 28, 64);
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --btn-fun: #4bac4d;
+  /* ------------ COLOR TEXT ------------  */
+  --color-text : #2f4858;
+  --color-text-detail : #687881;
+  /* ----------------- COLOR BUTTON --------------  */
+  --color-primary : #ffe9e2;
+  --color-secondary : #edb2a0;
+  --color-tertiary : #967166;
+  --bg-style: #f5efe683;
+}
+html{
+  scroll-behavior: smooth;
+
+}
+::selection{
+  color: pink;
+  background-color: var(--dark);
+}

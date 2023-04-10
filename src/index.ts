@@ -9,10 +9,13 @@ import cors from "cors";
 import { mongodb } from "./configs/mongodb";
 import helmet from "helmet";
 import compression from "compression";
+import path from 'path';
 
 const app = express();
 
 const port = process.env.PORT || 4001;
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
 app.use(morgan("dev"));
 app.use(morgan("combined"));

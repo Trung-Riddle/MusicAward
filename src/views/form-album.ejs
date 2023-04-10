@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/font/css/all.min.css" />
+  </head>
+
+  <body>
+    <nav class="sidebar-admin active">
+      <div class="logo_content">
+          <div class="logo-admin">
+              <img src="/image/user.png" height="32px" alt="" />
+              <span class="logo_name"><span id="shadow">
+                  <span id="glow">Music</span><span id="blink">award</span>
+                  </span></span>
+          </div>
+          <i class="fa-light fa-bars-sort" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+          <li>
+              <a class="icons-link active" href="#"><i class="fa-regular fa-gauge"></i>
+                  <span class="link_name">Dashboard</span>
+              </a>
+              <span class="tooltip-hover">Dashboard</span>
+          </li>
+          <li>
+              <a class="icons-link" href=""><i class="fa-light fa-album-collection"></i>
+                  <span class="link_name">Album</span>
+              </a>
+              <span class="tooltip-hover">Album</span>
+          </li>
+          <li>
+              <a class="icons-link" href=""><i class="fa-regular fa-bag-shopping"></i>
+                  <span class="link_name">Bài hát</span>
+              </a>
+              <span class="tooltip-hover">Bài hát</span>
+          </li>
+          <li>
+              <a class="icons-link" href=""><i class="fa-light fa-users"></i>
+                  <span class="link_name"> Người Dùng</span>
+              </a>
+              <span class="tooltip-hover"> Người Dùng</span>
+          </li>
+      </ul>
+      <div class="profile_content_ad">
+          <div class="profile_ad">
+              <div class="profile_detail">
+                  <img src="https://i.pinimg.com/564x/b0/4c/39/b04c39732cfefc24f9b633c9a0b8d6b3.jpg" alt="" />
+                  <div class="name_job">
+                      <div class="name_ad">Admin</div>
+                      <div class="job_ad">Frond-end Web</div>
+                  </div>
+              </div>
+              <i class="fa-light fa-arrow-right-from-bracket logout_ic"></i>
+          </div>
+      </div>
+  </nav>
+    <div class="tab-table-products active">
+      <div class="container-right">
+        <div class="tool-header-ad">
+          <div class="box-search-header">
+            <i class="fa-light fa-magnifying-glass"></i>
+            <input
+              type="search"
+              placeholder="Tìm kiếm ở đây..."
+              class="search-box"
+              name="search-all"
+            />
+          </div>
+          <div class="box-tool-admin">
+            <i class="fa-light fa-gear"></i>
+            <i class="fa-light fa-user"></i>
+            <i class="fa-light fa-bell" id="blink"></i>
+            <i class="fa-light fa-envelope" id="blink"></i>
+            <i class="fa-light fa-arrow-right-from-bracket"></i>
+          </div>
+        </div>
+        <div class="tool-add-form glow">
+          <span class="text"
+            ><a href="#"
+              ><i class="fa-light fa-square-chevron-left"></i>&nbsp; Quay Lại</a
+            ></span
+          >
+          <span class="text"
+            ><a class="trash" href="#"
+              ><i class="fa-solid fa-trash-can"></i>&nbsp; Xoá Sản Phẩm Này</a
+            ></span
+          >
+        </div>
+        <form
+          class="form-addproduct"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <h2 class="neon-purple" id="trav">Form Dữ Liệu Sản Phẩm</h2>
+          <div class="flex-form-row">
+            <div class="form-group-ad">
+              <label for="cate">Danh Mục *</label>
+              <select name="" id="cate">
+                <option value="">--Chọn Danh Mục--</option>
+                <option value="">7845</option>
+                <option value="">hjbdjvnb</option>
+                <option value="">345</option>
+              </select>
+            </div>
+            <div class="form-group-ad">
+              <label for="">Tên Sản Phẩm *</label>
+              <input id="" type="text" />
+            </div>
+            <div class="form-group-ad">
+              <label for="pri">Giá Sản Phẩm *</label>
+              <input
+                id="pri"
+                type="Number"
+                step="10"
+                min="0"
+                value=""
+                maxlength="16"
+                size="16"
+              />
+            </div>
+          </div>
+          <div class="flex-form-row-2">
+            <div class="form-group-ad">
+              <label for="qty">Số Lượng *</label>
+              <input id="qty" type="Number" step="10" min="0" />
+              <label for="sta">Trạng Thái *</label>
+              <select name="" id="sta">
+                <option value="">--Chọn Trạng Thái--</option>
+                <option value="">Hoạt Động</option>
+                <option value="">Không Hoạt Động</option>
+              </select>
+            </div>
+            <div class="form-group-ad-2">
+              <label for="des">Mô Tả Sản Phẩm *</label>
+              <textarea name="" id="des" cols="" rows=""></textarea>
+            </div>
+          </div>
+          <div class="flex-form-row-img">
+            <div class="form-group-ad-img">
+              <div class="upload-product-image">
+                <img
+                  class="upload-icon"
+                  src="./image/plus.png"
+                  alt="camera"
+                />
+                <img
+                  class="img-rounded-circle prd"
+                  height=""
+                  src="./image/background-pd.png"
+                  alt="profile"
+                />
+                <small class="form-text mb-3"> Chọn Hình Ảnh Hiển Thị</small>
+                <input
+                  type="file"
+                  class="form-control-file"
+                  name="profileUpload"
+                  id="upload-product"
+                />
+              </div>
+            </div>
+            <div class="form-upload-ad-imgs">
+              <input
+                type="file"
+                id="file-input"
+                onchange="showImageFour()"
+                accept="image/png, image/jpg, image/jpeg"
+                multiple
+              />
+              <label for="file-input">
+                <i class="fa-duotone fa-upload"></i>&nbsp; Chọn 4 Hình Ảnh
+              </label>
+              <p id="num-of-file">Chưa có files được chọn</p>
+              <div id="images-show"></div>
+            </div>
+          </div>
+          <div class="form-group-ad">
+            <button class="submitbtn-ad" type="submit">
+              Xác Nhận Sản Phẩm
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      let pdPreview = document.querySelector(".prd");
+      let coverPD = document.getElementById("upload-product");
+      let uploadIcon = document.querySelector(".upload-icon");
+
+      pdPreview.addEventListener("click", (_) => coverPD.click());
+
+      coverPD.addEventListener("change", (_) => {
+        let filePD = coverPD.files[0];
+        let readerPD = new FileReader();
+        readerPD.onload = function () {
+          pdPreview.src = readerPD.result;
+          uploadIcon.style.display = "none";
+        };
+        readerPD.readAsDataURL(filePD);
+      });
+      let fileInputFour = document.querySelector("#file-input");
+      let imageShow = document.querySelector("#images-show");
+      let numOffile = document.querySelector("#num-of-file");
+      function showImageFour() {
+        numOffile.textContent = `${fileInputFour.files.length} files Được chọn`;
+        for (index of fileInputFour.files) {
+          let reader = new FileReader();
+          let figure = document.createElement("figure");
+          let figcap = document.createElement("figcaption");
+          figcap.innerText = index.name;
+          figure.appendChild(figcap);
+          reader.onload = () => {
+            let img = document.createElement("img");
+            img.setAttribute("src", reader.result);
+            figure.insertBefore(img, figcap);
+          };
+          imageShow.appendChild(figure);
+          reader.readAsDataURL(index);
+        }
+      }
+    </script>
+    <script>
+      let btnMenuAd = document.querySelector("#btn");
+      let sidebarAd = document.querySelector(".sidebar-admin");
+      let containerAd = document.querySelector(".tab-table-products");
+      btnMenuAd.onclick = function () {
+        sidebarAd.classList.toggle("active");
+        btnMenuAd.classList.toggle("fa-bars-filter");
+        btnMenuAd.classList.toggle("fa-bars-sort");
+        containerAd.classList.toggle("active");
+      };
+      let iconsLink = document.querySelectorAll(".icons-link");
+      iconsLink.forEach((link) => {
+        link.addEventListener("click", () => {
+          removeActiveClasses();
+          link.classList.add("active");
+        });
+      });
+      function removeActiveClasses() {
+        iconsLink.forEach((link) => {
+          link.classList.remove("active");
+        });
+      }
+    </script>
+  </body>
+</html>
