@@ -17,7 +17,18 @@ export default (): express.Router => {
     validateRequestCreateAlbum(validatorDto.CreateAlbumDto),
     albumController.createAlbum
   );
-  router.get("/form-add", albumController.formAlbums);
+
+  router.put(
+    "/update/:albumId",
+    uploadCloud.fields([
+      {
+        name: "image",
+        maxCount: 1,
+      },
+    ]),
+    albumController.updateAlbum
+  );
+
   router.get("/", albumController.findAllAlbum);
 
   router.get("/song-by-album", albumController.findAllSongByAllAlbum);

@@ -1,0 +1,29 @@
+# ====================API ALBUM===================
+### Create album
+POST http://localhost:3005/albums/create
+Content-Type: application/json
+
+# data: {
+#     data: string,
+#     image: File
+# }
+
+# Sample data
+{
+    "data": "{"title":"chungdi","description":"sdfsdfoioi"}",
+    "image": "File"
+}
+
+### Find all albums
+GET http://localhost:3005/albums
+
+### Find all song by one album
+GET http://localhost:3005/albums/song-by-album/643555091c4d901d17be9dab
+
+# sample id
+# [
+#     "6421e55f65e79c34f1acde19",
+#     "6421e55f65e79c34f1acde1a",
+#     "6421e55f65e79c34f1acde1b",
+#     "6421e55f65e79c34f1acde1c"
+# ]

@@ -5,12 +5,10 @@ export const mongodb = {
     mongoose.set("strictQuery", false);
     mongoose.Promise = Promise;
     mongoose
-      .connect(process.env.MONGO_DB_URL_TEST)
+      .connect(process.env.MONGO_DB_URL)
       .then(() => {
         console.log("Connected to MongoDB");
       })
       .catch((error) => console.error(error));
-
-
   },
 };

@@ -22,5 +22,22 @@ export default (): express.Router => {
     songController.createSong
   );
 
+  router.put(
+    "/update/:songId",
+    uploadCloud.fields([
+      {
+        name: "thumb_nail",
+        maxCount: 1,
+      },
+      {
+        name: "audio",
+        maxCount: 1,
+      },
+    ]),
+    songController.updateSong
+  );
+
+  router.delete("/delete/:songId", songController.deleteSong);
+
   return router;
 };

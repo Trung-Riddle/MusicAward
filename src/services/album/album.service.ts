@@ -6,6 +6,8 @@ import SongsModel from "../../models/song";
 export const albumService = {
   async create(data: string, files: any) {
     try {
+      console.log(data);
+
       const albumPublicId = files["image"][0].filename;
 
       if (!albumPublicId) throw createError.BadRequest(`Data file is missing`);
@@ -87,6 +89,40 @@ export const albumService = {
       if (!songs) throw createError.BadRequest();
 
       return { status: 200, data: songs };
+    } catch (error) {
+      console.error(error);
+      return error;
+    }
+  },
+
+  async update(data: string, files: any, albumId: string) {
+    try {
+      const album = await AlbumModel.findById(albumId).exec();
+
+      if (!album) throw createError.BadRequest(`Id của album không tồn tại`);
+
+      if (files["image"]) {
+        const albumPublicId = files["image"][0].filename;
+        const albumPath = files["image"][0].path;
+
+        await uploadCloud.uploader.destroy(album.image_public_id);
+
+        album.image_public_id = albumPublicId;
+        album.image = albumPath;
+      }
+
+      if (data) {
+        const { title, description } = JSON.parse(data);
+
+        if (title && title != album.title) album.title = title;
+
+        if (description && description != album.description)
+          album.description = description;
+      }
+
+      await album.save();
+
+      return { status: 200, data: album };
     } catch (error) {
       console.error(error);
       return error;
