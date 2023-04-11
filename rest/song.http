@@ -15,5 +15,21 @@ Content-Type: application/json
     "audio": "File"
 }
 
+### Update song
+POST http://localhost:3005/songs/update/:songId
+Content-Type: application/json
+
+
+{
+    "data": {
+        "album_id": [1], 
+        "name": "Meo meo meo",
+        "artist": "Amee",
+        "genre": ["balad"]
+    },
+    "thumb_nail": "File",
+    "audio": "File"
+}
+
 ###
 DELETE  http://localhost:3005/songs/delete/64355f35eec69e9e9ec2b964
